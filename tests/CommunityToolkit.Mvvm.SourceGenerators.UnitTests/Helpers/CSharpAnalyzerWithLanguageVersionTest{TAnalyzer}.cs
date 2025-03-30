@@ -62,7 +62,6 @@ internal sealed class CSharpAnalyzerWithLanguageVersionTest<TAnalyzer> : CSharpA
         test.TestState.AdditionalReferences.Add(MetadataReference.CreateFromFile(typeof(RequiredAttribute).Assembly.Location));
 #endif
         test.TestState.AdditionalReferences.Add(MetadataReference.CreateFromFile(typeof(ObservableObject).Assembly.Location));
-
         test.ExpectedDiagnostics.AddRange(expected);
 
         return test.RunAsync(CancellationToken.None);
